@@ -1,6 +1,6 @@
 {
   "name": "ttl-cache",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple in-memory object cache with TTL based per-item expiry",
   "main": "lib/cache.js",
   "scripts": {
