@@ -3,6 +3,21 @@ node-ttl-cache
 
 Simple in-memory object cache with TTL based per-item expiry
 
+## Installation:
+
+    npm install ttl-cache
+    
+## Usage:
+
+    var cache = require('ttl-cache')();
+    
+    old_value = cache.set(key, value); // Set a value (returns old)
+    new_value = cache.get(key); // Get a value
+    values = cache.mget(key1, key2); // Get multiple values at once
+    cache.del(key1, key2); // Delete one or more values at once
+    cache.ttl(key, 3); // Change the ttl of a value (in seconds)
+    cache.flush(); // Wipe the lot
+
 ## License:
 
 Project code is released under CC0 license:
