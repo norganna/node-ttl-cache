@@ -9,7 +9,8 @@ Simple in-memory object cache with TTL based per-item expiry
     
 ## Usage:
 
-    var cache = require('ttl-cache')();
+    var Cache = require('ttl-cache'),
+        cache = new Cache();
     
     old_value = cache.set(key, value); // Set a value (returns old)
     new_value = cache.get(key); // Get a value
@@ -17,6 +18,13 @@ Simple in-memory object cache with TTL based per-item expiry
     cache.del(key1, key2); // Delete one or more values at once
     cache.ttl(key, 3); // Change the ttl of a value (in seconds)
     cache.flush(); // Wipe the lot
+
+## Options:
+
+    var cache({
+            ttl: 300,       // Number of seconds to keep entries
+            interval: 60    // Cleaning interval
+        });
 
 ## License:
 
