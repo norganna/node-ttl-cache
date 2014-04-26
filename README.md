@@ -15,6 +15,7 @@ Simple in-memory object cache with TTL based per-item expiry
     old_value = cache.set(key, value); // Set a value (returns old)
     new_value = cache.get(key); // Get a value
     values = cache.mget(key1, key2); // Get multiple values at once
+    cache.set(key, value, ttl); // Set a value, override default ttl
     cache.del(key1, key2); // Delete one or more values at once
     cache.ttl(key, 3); // Change the ttl of a value (in seconds)
     cache.flush(); // Wipe the lot
