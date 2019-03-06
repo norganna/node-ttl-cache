@@ -23,8 +23,9 @@ Simple in-memory object cache with TTL based per-item expiry
 ## Options:
 
     var cache({
-            ttl: 300,       // Number of seconds to keep entries
-            interval: 60    // Cleaning interval
+            ttl: 300,           // Number of seconds to keep entries
+            interval: 60,       // Cleaning interval
+            unrefTimers: true   // Prevent timers blocking event loop (node only)
         });
 
 ## License:
